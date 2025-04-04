@@ -13,7 +13,6 @@ function showPage(pageId, index) {
   }
 }
 function redirect(page){
-  console.log('gwdwh')
   setTimeout(function () { window.location = `${page}.html` }, 1);
 };
 function showTab(tabId, index) {
@@ -52,4 +51,14 @@ function downloadExcel(month) {
   const filename = `${month}.xlsx`;
   XLSX.writeFile(wb, filename);
 }
-
+function showAlert(type) {
+  const alert = document.getElementById(type);
+  var newDiv = document.createElement("div");
+  newDiv.innerHTML = "This is a dynamic div";
+  newDiv.className = `alert alert-${type}`;
+  alert.style.display = 'block';
+  alert.appendChild(newDiv);
+  setTimeout(() => {
+    alert.style.display = 'none';
+  }, 3000);
+}

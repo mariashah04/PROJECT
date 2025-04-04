@@ -4,6 +4,7 @@
     <title>Digital Mentor Dairy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="others/images/fav.PNG">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -173,13 +174,28 @@
                         </form>
                     </div>
                     <div id="mentor" class="tab">
-                        <h3>Mentor Information</h3>
-                        <label for=""> Name</label>
-                        <p>test user</p>
-                        <label for=""> Email Id</label>
-                        <p>test@gamil.com</p>
-                        <label for=""> Contact Number</label>
-                        <p>123</p>
+                        <div class="profile-info">
+                            <div class="card">
+                                <div class="profile-container">
+                                    <img src="others/images/mentor.png" alt="Image">
+                                </div>
+                                <div class="profile-info">
+                                    <h1>Waheeda Dhokley</h1>
+                                    <p class="job-title">Assistant Professor</p>
+                                    <p class="desc">M.E. (Master of Engineering) in Computer Engineering from VIT,
+                                        University of Mumbai – Oct 2011
+                                        B.E. (Bachelor of Engineering) in Computer Engineering from MHSSCE, University
+                                        of Mumbai – July 2003</p>
+                                </div>
+                                <div class="profile-social">
+                                    <a target="_blank"
+                                        href="https://scholar.google.co.in/citations?user=2bMjtGkAAAAJ&hl=en">View
+                                        Google Scholar Profile</a>
+                                    <a href="#">waheeda.dhokley@mhssce.ac.in</a>
+                                </div>
+                                <div class="card-bottom"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -206,7 +222,7 @@
                                     <td>
                                         <input id="file-upload-1" type="file" style="display: none;"
                                             onchange="handleFileUpload(event, 1)">
-                                        <button class="btn btn-view" data-toggle="modal" data-target="#imageModal"
+                                        <button class="btn btn-view" data-toggle="modal" data-target="#document"
                                             title="View">
                                             <i class="fa fa-eye"></i>
                                         </button>
@@ -399,7 +415,7 @@
                                     <td>
                                         <input id="file-upload-1" type="file" style="display: none;"
                                             onchange="handleFileUpload(event, 1)">
-                                        <button class="btn btn-view" data-toggle="modal" data-target="#imageModal"
+                                        <button class="btn btn-view" data-toggle="modal" data-target="#adhar"
                                             title="View">
                                             <i class="fa fa-eye"></i>
                                         </button>
@@ -538,7 +554,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+    <div class="modal fade" id="document" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -550,6 +566,21 @@
                 </div>
                 <div class="modal-body">
                     <img id="modalImage" src="others/images/sem.jpeg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="adhar" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Preview Result</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="others/images/adhar.png" alt="Image" class="img-fluid">
                 </div>
             </div>
         </div>
