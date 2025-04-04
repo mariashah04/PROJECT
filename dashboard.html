@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="others/main-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="others/menu.js"></script>
+</head>
+<body class="no-bg">
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>ARFA SHAIKH</h2>
+            <ul>
+                <li class="menu-tab active" onclick="showPage('profile',0)">Profile</li>
+                <li class="menu-tab" onclick="showPage('documents',1)">Documents</li>
+                <li class="menu-tab" onclick="showPage('attendance',2)">Attendance</li>
+                <li class="menu-tab" onclick="showPage('contact',3)">Contact</li>
+            </ul>
+            <ul class="logoutStyle">
+                <a onclick="redirect('index')">Logout</a>
+            </ul>
+        </div>
+        <!-- Chatbot -->
+           <!-- Elfsight AI Chatbot | buddybot -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-1dcfa4f1-f73f-4c4a-884f-3d6fdefb3577" data-elfsight-app-lazy></div>
+        <div class="main-content">
+            <div id="profile" class="page active">
+                <div class="tabs">
+                    <div class="tab-btn active" onclick="showTab('personal', 0)">Personal</div>
+                    <div class="tab-btn" onclick="showTab('academic', 1)">Academic</div>
+                    <div class="tab-btn" onclick="showTab('mentor', 2)">Mentor</div>
+                </div>
+                <div class="tab-content">
+                    <!-- Tab 1 -->
+                    <div id="personal" class="tab active">
+                        <form class="persoanl-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" id="dob" name="dob" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="gender">Gender</label>
+                                    <select id="gender" name="gender" required>
+                                        <option value="">Select Gender</option>
+                                        <option value="female">Female</option>
+                                        <option value="male">Male</option>
+                                        <option value="non-binary">Non-Binary</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not-to-say">Prefer Not to Say</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address" name="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state">
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Zip Code</label>
+                                    <input type="text" id="zip" name="zip">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="parentsContact">Parent's Contact Number</label>
+                                    <input type="text" id="parentsContact" name="parentsContact">
+                                </div>
+                                <div class="form-group">
+                                    <label for="parentsEmail">Parent's Email ID</label>
+                                    <input type="text" id="parentsEmail" name="parentsEmail">
+                                </div>
+                                <div class="form-group m-t">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Tab 2  -->
+                    <div id="academic" class="tab">
+                        <form class="academic-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="prnNo">PRN Number</label>
+                                    <input type="text" id="prnNo" name="prnNo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hscPercentage">HSC Percentage</label>
+                                    <input type="text" id="hscPercentage" name="hscPercentage" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sscPercentage">SSC Percentage</label>
+                                    <input type="text" id="sscPercentage" name="sscPercentage" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cgpaSem1">CGPA (Semester 1)</label>
+                                    <input type="number" id="cgpaSem1" name="cgpaSem1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cgpaSem2">CGPA (Semester 2)</label>
+                                    <input type="number" id="cgpaSem2" name="cgpaSem2" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cgpaSem3">CGPA (Semester 3)</label>
+                                    <input type="number" id="cgpaSem3" name="cgpaSem3" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cgpaSem4">CGPA (Semester 4)</label>
+                                    <input type="number" id="cgpaSem4" name="cgpaSem4" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cgpaSem5">CGPA (Semester 5)</label>
+                                    <input type="number" id="cgpaSem5" name="cgpaSem5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cgpaSem6">CGPA (Semester 6)</label>
+                                    <input type="number" id="cgpaSem6" name="cgpaSem6" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cgpaSem7">CGPA (Semester 7)</label>
+                                    <input type="number" id="cgpaSem7" name="cgpaSem7" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cgpaSem8">CGPA (Semester 8)</label>
+                                    <input type="number" id="cgpaSem8" name="cgpaSem8" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="mentor" class="tab">
+                        <h3>Mentor Information</h3>
+                        <label for=""> Name</label>
+                        <p>test user</p>
+                        <label for=""> Email Id</label>
+                        <p>test@gamil.com</p>
+                        <label for=""> Contact Number</label>
+                        <p>123</p>
+                    </div>
+                </div>
+            </div>
+            <div id="documents" class="page">
+                <div class="tabs">
+                    <button class="tab-btn" onclick="showTab('results',3)">Results</button>
+                    <button class="tab-btn" onclick="showTab('personalDocs',4)">Personal Documents</button>
+                </div>
+                <div class="tab-content">
+                    <!-- Tab 1 -->
+                    <div id="results" class="tab active">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>SR.NO.</th>
+                                    <th>Exams</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>SSC</td> 
+                                    <td>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button class="btn btn-view" data-toggle="modal" data-target="#imageModal"
+                                            title="View">
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-delete" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                        <!-- Other action buttons -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>HSC</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                        <!-- Other action buttons -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>SEM 1</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>SEM 2</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>SEM 3</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>SEM 4</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>SEM 5</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>SEM 6</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>SEM 7</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>SEM 8</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Tab 2  -->
+                    <div id="personalDocs" class="tab">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>SR.NO.</th>
+                                    <th>Documents</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Adhar Card</td>
+                                    <td>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button class="btn btn-view" data-toggle="modal" data-target="#imageModal"
+                                            title="View">
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button class="btn btn-delete" title="Delete">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                        <!-- Other action buttons -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Leaving Certificate</td>
+                                    <td>
+                                        <label for="file-upload-1" class="btn btn-upload" title="Upload">
+                                            <i class="fa fa-upload"></i>
+                                        </label>
+                                        <input id="file-upload-1" type="file" style="display: none;"
+                                            onchange="handleFileUpload(event, 1)">
+                                        <button title="View" disabled>
+                                            <i class="fa fa-eye"></i>
+                                        </button>
+                                        <button title="Delete" disabled>
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div id="attendance" class="page">
+                <h4>Select Month</h4>
+                <div class="months-card-container">
+                    <div class="card">
+                        <h3>January</h3>
+                        <button onclick="downloadExcel('January')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>February</h3>
+                        <button onclick="downloadExcel('February')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>March</h3>
+                        <button onclick="downloadExcel('March')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>April</h3>
+                        <button onclick="downloadExcel('April')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>May</h3>
+                        <button onclick="downloadExcel('May')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>June</h3>
+                        <button onclick="downloadExcel('June')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>July</h3>
+                        <button onclick="downloadExcel('July')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>August</h3>
+                        <button onclick="downloadExcel('August')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>September</h3>
+                        <button onclick="downloadExcel('September')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>October</h3>
+                        <button onclick="downloadExcel('October')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>November</h3>
+                        <button onclick="downloadExcel('November')">Download</button>
+                    </div>
+                    <div class="card">
+                        <h3>December</h3>
+                        <button onclick="downloadExcel('December')">Download</button>
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="page">
+                <div class="contact-contaier">
+                    <div>
+                        <div class="bg-white">
+                                <a href="javascript:;">
+                                    <i class="fa fa-phone"></i>
+                                    <h5>  +91 22 23012922</h5>
+                                </a>
+                                <a href="javascript:;">
+                                    <i class="fa fa-envelope"></i>
+                                    <h5>  aimhssce@gmail.com/mhssce@yahoo.in</h5>
+                                </a>
+                                <a href="javascript:;">
+                                    <i class="fa fa-map"></i>
+                                    <h5>  8, Saboo Siddik Polytechnic Road, Byculla, Mumbai 400 008</h5>
+                                </a>
+                        </div>
+                        <img id="modalImage" src="others/images/contact.png" alt="Image" class="img-fluid">
+                    </div> 
+<form class="contact-form">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="msg">Message</label>
+            <textarea name="message" id="message" rows="5"></textarea>
+        </div>
+     
+    </div>
+    <div class="form-group m-t">
+        <button type="submit">Send your message</button>
+    </div>
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Preview Result</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="others/images/sem.jpeg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

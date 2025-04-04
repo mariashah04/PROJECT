@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="others/style.css">
+    <script src="others/menu.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="logo" src="others/images/logo.png" alt="">
+            <h2>Register</h2>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="number" id="Year" name="Year" placeholder="Year" required>
+                <select>
+                    <option>COMPUTER</option>
+                    <option>MECHANICAL</option>
+                    <option>ELECTRONICS</option>
+                    <option>CIVIL</option>
+                </select>
+                <input type="text" id="UserId" name="UserId" placeholder="User ID" required>
+                <input type="text" id="LoginId" name="LoginId" placeholder="Login ID" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="password" name="rePassword" placeholder="Re Enter Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <div class="signup">
+                <b>Already have an account?</b>
+                <a onclick="redirect('index')">Sign in</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
