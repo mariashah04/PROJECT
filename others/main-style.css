@@ -175,7 +175,7 @@ button[type="submit"]:hover {
   .bg-white {
     float: inherit;
     position: absolute;
-    left: 7%;
+    left: 8px;
     top: 20%;
     z-index: 1000;
     background-color: #ffffff59;
@@ -192,6 +192,10 @@ button[type="submit"]:hover {
       }
     }
   }
+  .contact-img {
+    height: 500px;
+    width: auto;
+  }
 }
 .m-t {
   margin-top: 2%;
@@ -204,7 +208,7 @@ button[type="submit"]:hover {
 .months-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 75px;
+  gap: 15px 75px;
   margin: 0 auto;
   
 .card {
