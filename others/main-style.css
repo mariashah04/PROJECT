@@ -52,6 +52,7 @@ li.menu-tab.active {
 
 .main-content {
   flex: 1;
+  min-height: 0;
   padding: 6px;
   background-color: #f4f4f4;
   overflow-y: auto;
@@ -63,6 +64,12 @@ li.menu-tab.active {
 
 .page.active {
   display: block;
+}
+
+#attendance.page.active {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .tabs {
@@ -187,7 +194,7 @@ button[type="submit"]:hover {
       color: #333;
       text-decoration: inherit;
 
-      >i {
+      > i {
         margin: 10px;
       }
     }
@@ -206,39 +213,89 @@ button[type="submit"]:hover {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 75px;
   margin: 0 auto;
-  
-.card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .card button:hover {
+    background-color: #0056b3;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.months-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  flex: 1;
+  min-height: 0;
+  max-width: 1500px;
+  margin: 10px 0 0 0;
+  padding: 0 16px 16px 0;
+  box-sizing: border-box;
+}
+.months-card-container .card {
+  margin: 0;
+  width: auto;
+  min-height: 0;
+  padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+.months-card-container .card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.months-card-container .card button {
+  padding: 6px 14px;
+  font-size: 13px;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #333;
+@media (max-width: 768px) {
+  .months-card-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
 }
 
-.card button {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
+@media (max-width: 480px) {
+  #attendance.page.active {
+    height: auto;
+  }
 
-.card button:hover {
-  background-color: #0056b3;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-}
+  .months-card-container {
+    flex: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
 }

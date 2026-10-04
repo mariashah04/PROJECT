@@ -1,27 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>Page Title</title>
-    <link rel="stylesheet" href="others/style.css">
+  <head>
+    <title>Digital Mentor Diary - Login</title>
+    <link rel="stylesheet" href="others/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="others/menu.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="card">
-            <img class="logo" src="others/images/logo.png" alt="">
-            <h2>Login</h2>
-            <form>
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <button type="submit"><a onclick="redirect('dashboard')">Login</a></button>
-            </form>
-            <div class="signup">
-                <b>Don't have account?</b>
-                <a onclick="redirect('registration')">Sign up</a>
-            </div>
+      <div class="card">
+        <img class="logo" src="others/images/logo.png" alt="" />
+        <h2>Login</h2>
+        <form id="loginForm" autocomplete="off">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+            autocomplete="off"
+          />
+
+          <div style="position: relative; width: 100%; margin: 0">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+              autocomplete="new-password"
+              style="
+                width: 100%;
+                padding-right: 44px;
+                box-sizing: border-box;
+                margin: 0;
+              "
+            />
+            <span
+              id="togglePassword"
+              title="Show password"
+              style="
+                position: absolute;
+                right: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: #777;
+              "
+            >
+              <i class="fa fa-eye" id="eyeIcon"></i>
+            </span>
+          </div>
+
+          <p
+            id="loginError"
+            style="color: #c0392b; display: none; margin: 6px 0"
+          ></p>
+          <button type="submit">Login</button>
+        </form>
+        <div class="signup">
+          <b>Demo login only. Sign up is disabled.</b>
         </div>
+      </div>
     </div>
 
-</body>
+    <script>
+      // Clear the form whenever this page is shown (also after Logout)
+      window.addEventListener("pageshow", function () {
+        document.getElementById("loginForm").reset();
+        document.getElementById("password").type = "password";
+        document.getElementById("eyeIcon").className = "fa fa-eye";
+      });
 
+      // Show / hide password
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          var input = document.getElementById("password");
+          var icon = document.getElementById("eyeIcon");
+          var show = input.type === "password";
+          input.type = show ? "text" : "password";
+          icon.className = show ? "fa fa-eye-slash" : "fa fa-eye";
+          this.title = show ? "Hide password" : "Show password";
+        });
+
+      // Login
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          var err = document.getElementById("loginError");
+          err.style.display = "none";
+          try {
+            var res = await fetch("/api/login", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+              }),
+            });
+            if (res.ok) {
+              window.location.href = "dashboard.html";
+            } else {
+              err.textContent = "Invalid username or password";
+              err.style.display = "block";
+            }
+          } catch (error) {
+            err.textContent = "Network error. Please try again.";
+            err.style.display = "block";
+          }
+        });
+    </script>
+  </body>
 </html>

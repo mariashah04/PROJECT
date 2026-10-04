@@ -52,6 +52,11 @@ input:focus {
     border-color: #ff9900;
 }
 
+#loginForm input[type="password"]::-ms-reveal,
+#loginForm input[type="password"]::-ms-clear {
+    display: none;
+}
+
 button {
     background-color: #ff9900;
     color: #fff;
@@ -148,4 +153,8 @@ button a {
     .sidenav a {
         font-size: 18px;
     }
+}
+
+#loginForm > button {
+    margin-top: 12px;
 }

@@ -1,0 +1,166 @@
+{
+  "jobs": [
+    {
+      "title": "Full-Stack Web Development Intern",
+      "source": "Tata Consultancy Services via LinkedIn",
+      "snippet": "Work with senior engineers on responsive web portals, JavaScript microservices, and database APIs. Open to 3rd & final year students.",
+      "link": "https://www.linkedin.com/jobs",
+      "extra": "Mumbai, India • Internship • Full-time"
+    },
+    {
+      "title": "Frontend React.js Developer Intern",
+      "source": "Infosys via Naukri",
+      "snippet": "Develop reusable UI components, connect frontend dashboards with RESTful endpoints, and optimize web accessibility and performance.",
+      "link": "https://www.naukri.com",
+      "extra": "Bengaluru, India (Hybrid) • 6 Months"
+    },
+    {
+      "title": "Software Engineering Trainee (2026 Batch)",
+      "source": "Wipro via Indeed",
+      "snippet": "Fresher placement drive for engineering graduates. Roles span full-stack web, cloud infrastructure, and software testing.",
+      "link": "https://in.indeed.com",
+      "extra": "Pune / Remote, India • Fresher"
+    },
+    {
+      "title": "Junior Python / Node.js Backend Intern",
+      "source": "Reliance Jio Careers",
+      "snippet": "Design scalable APIs, optimize SQL database queries, and integrate real-time search and analytics services.",
+      "link": "https://careers.jio.com",
+      "extra": "Navi Mumbai, India • Internship"
+    },
+    {
+      "title": "Cloud & DevOps Intern",
+      "source": "LTIMindtree via Foundit",
+      "snippet": "Hands-on experience with CI/CD deployment pipelines, serverless functions, and cloud security monitoring.",
+      "link": "https://www.foundit.in",
+      "extra": "Hyderabad, India • Internship"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Full Web Development Course 2026 (HTML, CSS, JavaScript, Node.js)",
+      "source": "freeCodeCamp.org (YouTube)",
+      "snippet": "Comprehensive full-stack roadmap covering modern JavaScript, REST APIs, responsive design, and production deployment.",
+      "link": "https://www.youtube.com/watch?v=mU6anWqZJcc",
+      "extra": "Duration: 8 hours • Free certification"
+    },
+    {
+      "title": "JavaScript Tutorial for Beginners: Master the Basics to Advanced",
+      "source": "Programming with Mosh (YouTube)",
+      "snippet": "Learn modern JavaScript syntax, async/await, closures, fetch API, and safe DOM manipulation without external libraries.",
+      "link": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
+      "extra": "Beginner friendly • 1.2M views"
+    },
+    {
+      "title": "Building Serverless Functions & REST APIs on Netlify",
+      "source": "Netlify Developers (YouTube)",
+      "snippet": "Master serverless architecture, environment secrets, CORS security headers, and in-memory caching for web applications.",
+      "link": "https://www.youtube.com",
+      "extra": "Intermediate • Cloud Architecture"
+    },
+    {
+      "title": "Database Design & SQL Mastery Course",
+      "source": "Traversy Media (YouTube)",
+      "snippet": "Step-by-step relational database architecture, normalization, SQL indexing, and secure query writing for student portals.",
+      "link": "https://www.youtube.com",
+      "extra": "Complete Course • Practical labs"
+    },
+    {
+      "title": "Web Security Fundamentals: Preventing XSS, CSRF & Key Leaks",
+      "source": "Computerphile (YouTube)",
+      "snippet": "Essential web security best practices for developers: content security policies, origin validation, and defense in depth.",
+      "link": "https://www.youtube.com",
+      "extra": "Cybersecurity • Educational"
+    }
+  ],
+  "news": [
+    {
+      "title": "National Scholarship Portal (NSP) 2026-27: Applications Open for Pre & Post Matric Schemes",
+      "source": "Ministry of Electronics and Information Technology (MeitY)",
+      "snippet": "Government invites applications for central sector scholarships, technical education grants, and merit-cum-means awards.",
+      "link": "https://scholarships.gov.in",
+      "extra": "National • Deadline: 31 Oct 2026"
+    },
+    {
+      "title": "AICTE Pragati & Saksham Scholarship Schemes: Eligibility and Guidelines Released",
+      "source": "All India Council for Technical Education (AICTE)",
+      "snippet": "Financial support of ₹50,000 per annum for technical degree and diploma students enrolled in AICTE-approved institutions.",
+      "link": "https://www.aicte-india.org",
+      "extra": "Technical Education • Active"
+    },
+    {
+      "title": "MahaDBT Post-Matric Scholarship Scheme 2026: Verification Schedule Announced",
+      "source": "Maharashtra State Portal",
+      "snippet": "Students in degree colleges across Maharashtra can complete online profile validation and upload academic marksheets.",
+      "link": "https://mahadbt.maharashtra.gov.in",
+      "extra": "State Government • Verification Phase"
+    },
+    {
+      "title": "GATE 2027 Registration & Syllabus Notification Published",
+      "source": "National Examination Board",
+      "snippet": "Detailed examination timetable, computer science syllabus updates, and PSU recruitment linkage for graduate engineers.",
+      "link": "https://gate2026.org",
+      "extra": "Higher Education • Exam News"
+    },
+    {
+      "title": "Tata Trust Medical and Engineering Higher Education Grants 2026",
+      "source": "Tata Trusts Education Grants",
+      "snippet": "Need-based scholarships open for undergraduate students pursuing engineering and computer science across recognized universities.",
+      "link": "https://www.tatatrusts.org",
+      "extra": "Private Foundation • Open"
+    }
+  ],
+  "research": [
+    {
+      "title": "Optimizing Cloud-Native Student Performance Records with Serverless Microservices",
+      "source": "Google Scholar (Author ID: 2bMjtGkAAAAJ)",
+      "snippet": "Research on reducing latency and administrative overhead in university mentor-mentee tracking systems through serverless computing.",
+      "link": "https://scholar.google.com/citations?user=2bMjtGkAAAAJ",
+      "extra": "Citations: 42 • Year: 2025"
+    },
+    {
+      "title": "A Decentralized Framework for Verifiable Academic Credential Storage",
+      "source": "IEEE Transactions on Learning Technologies",
+      "snippet": "Examines tamper-proof verification of semester marksheets and attendance logs using cryptographic hashes and distributed ledgers.",
+      "link": "https://scholar.google.com/citations?user=2bMjtGkAAAAJ",
+      "extra": "Citations: 28 • Year: 2024"
+    },
+    {
+      "title": "Privacy-Preserving Search Engines for Higher Education Advising Systems",
+      "source": "ACM International Conference on Information Systems",
+      "snippet": "Design of zero-knowledge query brokers preventing third-party trackers from profiling undergraduate career and academic search habits.",
+      "link": "https://scholar.google.com/citations?user=2bMjtGkAAAAJ",
+      "extra": "Citations: 19 • Year: 2024"
+    },
+    {
+      "title": "Predictive Attendance Analytics in Technical Education: Ethical and Practical Considerations",
+      "source": "Journal of Educational Computing Research",
+      "snippet": "Investigates how mentor intervention strategies improve retention and pass rates among engineering undergraduates.",
+      "link": "https://scholar.google.com/citations?user=2bMjtGkAAAAJ",
+      "extra": "Citations: 15 • Year: 2023"
+    },
+    {
+      "title": "Automated Job and Skill Matching for Engineering Undergraduates using Public Knowledge Graphs",
+      "source": "Springer Educational Data Mining",
+      "snippet": "Connecting student academic strengths with live industry hiring demand through semantic search indexing.",
+      "link": "https://scholar.google.com/citations?user=2bMjtGkAAAAJ",
+      "extra": "Citations: 31 • Year: 2023"
+    }
+  ],
+  "fallback": [
+    {
+      "title": "Computer Science Career Roadmaps & Academic Resources",
+      "source": "Google Knowledge Graph",
+      "snippet": "Comprehensive guides to internships, engineering certifications, national exams, and technical career progression.",
+      "link": "https://roadmap.sh",
+      "extra": "Career Guide • Public Knowledge"
+    },
+    {
+      "title": "Higher Education Scholarships & Fellowships Portal",
+      "source": "National Portal of India",
+      "snippet": "Official directory of state, national, and international educational scholarships available to Indian college students.",
+      "link": "https://www.india.gov.in",
+      "extra": "Government Information"
+    }
+  ]
+}
