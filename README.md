@@ -3,7 +3,7 @@
 **SerpApi India Hackathon 2026** | **Track:** Knowledge & Public Interest
 
 **Live demo:** https://digitalmentordairy.netlify.app/
-**Demo login:** username `demo` / password `YOUR_DEMO_PASSWORD`
+**Demo login:** username `demo` / password `PrettyGoodPassword`
 (single throwaway demo account, no real student data is stored anywhere in this project)
 
 ---
