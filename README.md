@@ -131,12 +131,21 @@ Open http://localhost:8888, log in with your `DEMO_USER` / `DEMO_PASS`, then ope
 
 ---
 
-## 7. Limitations (honest notes)
+## 7. Scope and next steps
 
-- **Demo login only.** This repository contains a single demo account; it is not a full multi-user system. Sign-up is disabled. The profile, document and attendance pages are a front-end prototype and do not store data.
-- **The original MySQL backend described in the course paper is not part of this repository.**
-- **In-memory cache and rate limiting are best-effort** because serverless instances restart; a shared store (for example Redis) would be needed for production.
-- **Free SerpApi plan:** 250 searches per month, which is why demo mode and caching exist.
+**What this repository contains:** the front end of the portal plus a serverless backend for the chatbot and the demo login. The chatbot, search pipeline and route protection are fully working end to end.
+
+**Design choices for the hackathon:**
+
+- **Single demo account.** Login is verified on the server with a signed session, using one demo user so that judges can try the app without any setup. Sign-up is disabled.
+- **Portal pages are the base application.** The profile, documents and attendance pages are the original front-end screens; the new work is the SerpApi-powered assistant around them.
+- **Free SerpApi plan (250 searches/month).** Caching and demo mode keep usage low, and let anyone test the full flow without using searches.
+
+**Next steps:**
+
+- Connect the portal to a real database (the original course design used MySQL) with per-student accounts.
+- Replace the in-memory cache and rate limiter with a shared store such as Redis, since serverless instances restart.
+- Use the signed-in student's branch and semester to tailor internship and course searches.
 
 ---
 
